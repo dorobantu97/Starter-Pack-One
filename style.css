@@ -9,65 +9,77 @@ Weight: 400, 600, 700;
     display:flex;
     width:100%;
     height:100%;
-    justify-content:center;
     background-color:hsl(0, 0%, 100%);
-    flex-direction:column;
+    flex-direction: column;
     align-items:center;
+
 }
 .card-img {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content:center;
 }
 .title-recipe{
     display:flex;
     flex-direction:column;
     justify-content:center;
-    padding-left:25px;
+    width:100%;
+    height:auto;
 }
 .title{
     font-size:42px; 
 }
 .paragraph{
     color:hsl(240, 1%, 33%);
-    max-width:430px;
-    font-size:16px;
+    display:flex;
+    width:100%;
+    height:auto;
 }
 .preparation{
     display:flex;
     flex-direction:column;
     background-color:rgb(248, 240, 248);
-    width:380px;
-    padding-left:20px;
     color: hsl(240, 1%, 33%);
+    width:100%;
+    height:auto;
+    align-items:flex-start;
+    padding-left:20px;
+    gap:20px;
 }
 .title-prep{
     color:rgb(97, 23, 97);
 }
 .ingredients{
-    width:400px;
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
     padding-left:20px;
+    padding:20px;
     color: hsl(240, 1%, 33%);
     border-bottom:1px solid rgba(128, 128, 128, 0.299);
-    padding:30px;
+   
 }
 .title-1{
-    color:rgb(148, 78, 78);
+    color:rgb(148, 78, 78); 
 }
 .instructions{
-    width:400px;
-    padding-left:20px;
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
     color: hsl(240, 1%, 33%);
     border-bottom: 1px solid rgba(128, 128, 128, 0.299);
-}
+} 
 .nutrition{
-    width:400px;
+    width:100%;
+    height:auto;
     color: hsl(240, 1%, 33%);
-    
 }
 .list-kcal{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width:100%;
+    height:auto;
 }
 .border{
 border-bottom: 1px solid rgba(128, 128, 128, 0.299);
@@ -77,34 +89,95 @@ padding-left:20px;
     color: rgb(141, 52, 52);
     font-weight:bold;
 }
-
-@media(min-width:800px) {
+@media(max-width:450px) {
     body{
-    background-color: rgb(239, 228, 218);
-    width:100%;
-    height:100%;
-    margin:20px;
+    background-color: hsl(0, 0%, 100%);
+    width:auto;
+    height:auto;
     display:flex;
     justify-content:center;
     align-items:center;
-    }
-    .container {
+}
+.container {
      display:flex;
      flex-direction:column;
      justify-content:center;
      align-items:center;
-     width:50%;
+     width:100%;
      height:auto;
-     border-radius:20px;
-     padding:25px;
+
+}
+.preparation {
+    display: flex;
+    flex-direction: column;
+    padding-bottom:20px;
+    width:350px;
+}
+.card-img{
+    display:flex;
+    object-fit:cover;
+    width:100%;
+    height:200px;
+}
+}
+@media(min-width:450px) {
+    body {
+        background-color: rgb(239, 228, 218);
+        width: auto;
+        height: auto;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: auto;
+        padding:20px;
+        border-radius: 40px;
+        background-color:hsl(0, 0%, 100%);
 
     }
-    .preparation{
+    .card-img{
         display:flex;
-        flex-direction:column;
-        padding:10px;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+        height:200px;
     }
-   .card-img{
-    width:auto;
-   }
+    .title-recipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding:20px;
+    }
+    .title{
+    font-size:30px;
+    }
+    .preparation {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(248, 240, 248);
+    color: hsl(240, 1%, 33%);
+    height: auto;
+    padding-bottom:20px;
+    width:80%;
+    }
+    .ingredients {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding: 20px;
+    color: hsl(240, 1%, 33%);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.299);
+
+}
 }
